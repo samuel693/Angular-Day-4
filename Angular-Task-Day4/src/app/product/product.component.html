@@ -1,0 +1,31 @@
+<!-- product.component.html -->
+<div class="form-group">
+  <label for="name">Name:</label>
+  <input type="text" class="form-control" id="name" [(ngModel)]="name" [ngClass]="{
+    'is-valid': isValidName(),
+    'is-invalid': !isValidName()
+  }" id="name" [(ngModel)]="name" name="name" required>
+  <div class="valid-feedback">
+    Looks good!
+  </div>
+  <div class="invalid-feedback">
+    Something looks wrong! <br>
+    Name is required and must contain more than 3 letters
+</div>
+</div>
+<div class="form-group">
+  <label for="price">Price:</label>
+  <input type="number" class="form-control" id="price" [(ngModel)]="price"    [ngClass]="{
+    'is-valid': isValidAge,
+    'is-invalid': !isValidAge
+  }" id="name" [(ngModel)]="price" name="price" required>
+  <div class="valid-feedback">
+    Looks good!
+  </div>
+  <div class="invalid-feedback">
+    Something looks wrong! <br>
+    price must be between 100 and 2000
+</div>
+</div>
+<button class="btn btn-primary" (click)="addProduct()">Add Product</button>
+

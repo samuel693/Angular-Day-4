@@ -1,0 +1,6 @@
+<!-- app.component.html -->
+<div class="container">
+  <h1>Product List</h1>
+  <app-product (productAdded)="addProduct($event)"></app-product>
+  <app-product-details [products]="products" (productDeleted)="deleteProduct($event)"></app-product-details>
+</div>
